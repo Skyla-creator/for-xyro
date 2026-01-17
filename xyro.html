@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Friend 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Dancing Script', cursive;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffd6e8, #fff);
+    }
+
+    .container {
+      text-align: center;
+      max-width: 400px;
+      z-index: 2;
+    }
+
+    /* Envelope */
+    .envelope {
+      width: 220px;
+      height: 140px;
+      background: #ff8fb1;
+      border-radius: 6px;
+      margin: auto;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: float 2s ease-in-out infinite;
+      position: relative;
+    }
+
+    .envelope::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 110px solid transparent;
+      border-right: 110px solid transparent;
+      border-top: 70px solid #ffb6c9;
+    }
+
+    @keyframes float {
+      50% { transform: translateY(-6px); }
+    }
+
+    .open-text {
+      margin-top: 18px;
+      font-size: 22px;
+      color: #b3004b;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 20px;
+      background: #ff5f9e;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff3f8e;
+    }
+
+    /* Slides */
+    .slide {
+      display: none;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      animation: fadeIn 0.8s ease;
+      color: #444;
+      text-align: center;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .slide h2 {
+      font-size: 30px;
+      color: #ff5f9e;
+      margin-bottom: 12px;
+    }
+
+    .slide p {
+      font-size: 20px;
+      background: rgba(255,255,255,0.85);
+      padding: 12px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .slide img {
+      width: 120px;
+      border-radius: 14px;
+      margin: 8px;
+      display: inline-block;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      animation: floatUp 6s linear;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      to { transform: translateY(-120vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Envelope (only once) -->
+  <div id="envelopeScreen">
+    <div class="envelope" onclick="showSlide(1)"></div>
+    <div class="open-text">Click to open 💗</div>
+  </div>
+
+  <!-- Slide 1 -->
+  <div class="slide" id="slide1" style="background: linear-gradient(135deg, #ffd6e8, #ffe4e1);">
+    <h2>Hiii Xyroo🤍</h2>
+    <p>just want youuuu to know how much I reallyyy appreciate having you as my friend.
+        You’re always thereee for me when I need someone, whether it’s to laugh, talk about random stufff, 
+        or just chillll, and you always somehowww know how to make me feel betterrr. You’re honestlyyyy one
+        of the kindest and nicest people I knowww, and I feel reallyyy lucky to have you in my lifeee.
+        I loveeee every conversation we haveee, every joke we makeee, and even the little random moments 
+        we shareee because they all make my days betterrr and wayyyy more funnn. 
+        You make even the boring stuffff feel speciallll, and just knowing you’re thereee makes me feel happyyy and calmmmm. 
+        I feel like I can just beeee myself around youuu, and that’s something I don’t get to feel with everyoneee. 
+        You make life more funnn and happierrr just by being youuu, and
+         I honestlyyy don’t knowww what I’d do without you as my frienddd.</p>
+    <button onclick="showSlide(2)">Next ➜</button>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide" id="slide2" style="background: linear-gradient(135deg, #fff7d6, #fffacd);">
+    <h2>Firstly i would like to share some memorises🌸</h2>
+    <img src="streaks pet1.jpg">
+    <img src="streaks pet2.jpg">
+    <img src="water.jpg">
+    <p>These are some moments I’ll always remember with you like we have so much in common,and talking to youuu is always sooo funnn and easyyy.
+        So here are so screenshots they i've got through out our chattt!Not gonna lie every time i see water or 
+        waterbottle its reminds me of you funny right lmaoooooo.I also got these streaks we had.</p>
+    <button onclick="showSlide(3)">Next ➜</button>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide" id="slide3" style="background: linear-gradient(135deg, #d6f0ff, #ccefff);">
+    <h2>WOAHH PRO GYI BLL✨</h2>
+    <img src="wow.jpg">
+    <img src="his drawing.jpg">
+    <img src="pic3.jpg">
+    <img src="hehe.jpg">
+    <p>No matter what happened just know you have me on yourside and be proud of yourself cause no one knows
+        what it is like to be youu and also look you are a really nice artist and also a pro gamer , smart student , nice brother , best son to 
+        your parents and lastly also the best friend everyone could ask for!!nd also youuuu always make me 
+        see things in a better wayyy and help me stay positive even when stuff is tough.
+    <button onclick="showSlide(4)">Next ➜</button>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide" id="slide4" style="background: linear-gradient(135deg, #e6d6ff, #f0e6ff);">
+    <h2>Look at youuu being amazinggg as always😎 </h2>
+    <img src="pic1.jpg">
+    <img src="pic2.jpg">
+    <img src="jk.jpg">
+    <p>Omg thisss is youuuu, the absolute legendd who makes me laughhh smileee, and 
+        just feel sooo happyyy every single dayyy 😆💙 I swearrr no one could ever beeee as awesomeee as youuuu 
+        and this pic reminds me of all the crazyyy, silly, and unforgettable moments we have sharedd
+        every day with you reminds me how lucky I am to have you as a friend.</p>
+    <button onclick="showSlide(5)">Next ➜</button>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide" id="slide5" style="background: linear-gradient(135deg, #d6fff4, #ccfff0);">
+    <h2>~YES XYRO DA BESTTT! 🫶~</h2>
+    <img src="pic4.jpg">
+    <img src="funny.jpg">
+    <p>Youuuu are honestly the funniest and most random person I know 😆
+         I love how you always know how to make me laugh, even on the most boring days, and your little quirks just 
+         make everything more fun. Being around you is never dull and I always end up smiling 
+        whenever we are joking like being silly, or just talking about nothing at alll trust meee!!</p>
+    <button onclick="showSlide(6)">Next ➜</button>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="slide" id="slide6" style="background: linear-gradient(135deg, #fff0d6, #fff5e6);">
+    <h2>Special Moment 💗</h2>
+    <img src="us.jpg">
+    <p>This picture reminds me of how wonderful our friendship is.And I’m sooo excitedddd for all the funnn, silly, and randomnn moments we’ll shareee in the futureee I just know we will keep laughinggg at the silliest things, supporting each otherrr no matter what and making memories that I’ll never forgettt 💛 
+        I can’t wait to see all the adventurees ,inside jokess  and randomnn little moments that we haven’t even had yet and I know they’re gonna be sooo amazinggg because we’ll be doing them together and we vediii vedii tufff😆✨ Being your friend has already made my life sooo much happier  and I just know that our friendship will keep getting strongerrr 
+        and more funnn every single dayyy.I also hope you dont leave like how my other friends did....</p>
+    <button onclick="showSlide(7)">Next ➜</button>
+  </div>
+
+  <!-- Slide 7 Thank You -->
+  <div class="slide" id="slide7" style="background: white;">
+    <h2>THANK YOU 🫶</h2>
+    <img src="thxu.jpg">
+    <img src="sorry.jpg">
+    <p>hank you for being the best friend ever and for everything you have done for me .And you forlistening to me
+        even tho you have your own problems going on.I am also truly sorry for making you feel ignore sometimes 
+        i didnt mean to and sorry for everything too .But if you ever need someone remeber that i am always here for you MR GIRAFFEE!/p>
+  </div>
+  <hr>
+  <p>
+    By Skyla
+  </p>
+
+</div>
+
+<script>
+  function showSlide(n) {
+    document.getElementById("envelopeScreen").style.display = "none";
+    for (let i = 1; i <= 7; i++) {
+      const s = document.getElementById("slide" + i);
+      if (s) s.style.display = "none";
+    }
+    document.getElementById("slide" + n).style.display = "block";
+  }
+
+  function createHeart() {
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerText = "💗";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = Math.random() * 20 + 16 + "px";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 6000);
+  }
+
+  setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
